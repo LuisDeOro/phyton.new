@@ -47,7 +47,18 @@ print(listas)
 print(3 in listas)
 #la funcion len muestra la cantidad de datos que hay en la lista
 print(len(listas))
+#orden
+for i in range(len(listas)):
+    print(i, "<-", (listas[i])) 
+print ("------------------") 
+#orden invertido
+for i in range(len(listas)-1, -1, -1):
+    print(i, "<-", (listas[i]))
+print ("------------------") 
+#con while
+listas_= ["pan", "queso","arroz","sal"]
+while i < (str(listas_)):
+    print(i)
+#ejercisios clasroom
 
-
-    
             
