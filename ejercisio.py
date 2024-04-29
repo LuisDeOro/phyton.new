@@ -1,5 +1,5 @@
 #ejercisio1
-contraseña_uno = input("escribe una contraseña: solo letras")
+""" contraseña_uno = input("escribe una contraseña: solo letras")
 texto = ("_______________________")
 confirmacion = input("vuelva a introducir su contraseña: ")
 if confirmacion==contraseña_uno:
@@ -58,4 +58,4 @@ while True:
         print("contraseña correcta ")
         print("Acceso a todas las nenas de la zona:)")
         break
-
+ """
