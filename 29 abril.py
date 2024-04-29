@@ -60,5 +60,5 @@ listas_= ["pan", "queso","arroz","sal"]
 while i < (str(listas_)):
     print(i)
 #ejercisios clasroom
-
+yy
             
