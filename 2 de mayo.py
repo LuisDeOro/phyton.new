@@ -1,5 +1,5 @@
 
-""" class CajeroAutomatico:
+class CajeroAutomatico:
     def __init__(self, saldo_inicial):
         self.saldo = saldo_inicial
 
@@ -41,5 +41,63 @@ while True:
         print("¡Gracias por utilizar nuestro cajero!")
         break
     else:
-        print("Opción no válida. Por favor, seleccione una opción válida.") """
-#clase 2 de mayo
+        print("Opción no válida. Por favor, seleccione una opción válida.") 
+
+#Verificar si un número es primo
+def primo (num):
+    contador = 2
+    resultado = True     
+    while (contador <= num/2 and resultado):         
+        resultado = num % contador != 0
+        contador+= 1
+    return resultado
+#Verificar si un número es par o impar
+def par (num):
+    return num%2==0
+#Obtener la media de una serie de números
+def media(lista):
+    suma=0
+    for numero in lista:
+        suma+=numero
+    return suma/len(lista)
+
+def generar_lista():
+    cantidad = (int(input("Ingrese cuantos valores desea ingresar: ")))
+    lista =[]
+    for i in range(cantidad):
+        lista.append(int(input("Ingrese el valor: ")))
+    return lista
+#Verificar si una palabra contiene la letra x o z
+def palabra ():
+    palabra = (input("ingrese una palabra: "))
+    
+    return palabra.count ("x") != 0 or palabra.count ("z") != 0
+    
+continuar="si"
+while continuar=="si":
+    operacion=str(input("ingresa el proceso que deseas realizar (primo) (par) (media) (palabra)"))
+    if operacion=="primo":
+        print(primo(int(input("Ingrese el número: "))))
+    elif operacion=="par":
+        print(par(int(input("Ingrese el número: "))))
+    elif operacion=="media":
+        print(media(generar_lista()))
+    elif operacion=="palabra":
+        print(palabra())
+    else:   
+       print("ingreso una operacion no valida")
+    continuar=str(input("Deseas repetir el proceso? Ingresa (no) para cerrar el ciclo y (si) para repetir el proceso "))
+#loteria
+import random
+numeros_loteria = set()
+while len(numeros_loteria)<=0:
+    numero = random.randint(2,31)
+    numeros_loteria.add(numero)
+usuario = int(input("ingrese un numero del 2 al 31: "))
+if numeros_loteria == usuario:
+    print ("usted gano con el numero", usuario)
+    print("el numero ganador es: ", numeros_loteria)
+else:
+    print("Yaper")
+    print("el numero ganador es: ", numeros_loteria)
+    
